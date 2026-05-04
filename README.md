@@ -1,45 +1,59 @@
-# DTS Developer Technical Test
+# HMCTS Task Manager
 
-## Objective
-To assess your ability to build a simple API and frontend using best coding practices.
+A full-stack task management system for HMCTS caseworkers to track and manage their tasks efficiently.
 
-## Scenario
-HMCTS requires a new system to be developed so caseworkers can keep track of their tasks. Your technical test is to develop that new system so caseworkers can efficiently manage their tasks.
+## Project Structure
 
-## Task Requirements
+```
+├── backend/    # Node.js/Express/TypeScript REST API
+└── frontend/   # React/TypeScript single-page application
+```
 
-### Backend API
-The backend should be able to:
-- Create a task with the following properties:
-  - Title
-  - Description (optional field)
-  - Status
-  - Due date/time
-- Retrieve a task by ID
-- Retrieve all tasks
-- Update the status of a task
-- Delete a task
+## Quick Start
 
-### Frontend Application
-The frontend should be able to:
-- Create, view, update, and delete tasks
-- Display tasks in a user-friendly interface
+### Prerequisites
+- Node.js v18+
+- npm v9+
 
-## Technical Requirements
-Here are a few starter repositories if you would like to use our tech stack:
-- [Backend Starter Repo](https://github.com/hmcts/hmcts-dev-test-backend)
-- [Frontend Starter Repo](https://github.com/hmcts/hmcts-dev-test-frontend)
+### 1. Start the Backend
 
-You can use any language you are comfortable with or our own stack:
-- **Backend**: Any language or framework of your choice
-- **Frontend**: Any language or framework of your choice
-- Implement **unit tests**
-- Store data in a **database**
-- Include **validation and error handling**
-- **Document API endpoints**
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-## Submission Guidelines
-- Create repositories on GitHub and add add the links to your application
-- Include a helpful `README.md`!
+The API will be available at `http://localhost:3000`.  
+Interactive API docs (Swagger UI): `http://localhost:3000/api-docs`
 
-Happy coding!
+### 2. Start the Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+> **Note:** Start the backend first. The frontend proxies `/api` requests to `http://localhost:3000`.
+
+---
+
+## Features
+
+- **Create tasks** with title, optional description, status, and due date/time  
+- **View all tasks** with filter tabs (All / To Do / In Progress / Done)  
+- **Update task status** inline via dropdown (TODO → IN_PROGRESS → DONE)  
+- **Delete tasks** with a confirmation modal  
+- **Overdue indicator** highlights tasks past their due date  
+- **Responsive grid layout** for comfortable use at any screen size  
+
+## Tech Stack
+
+| Layer    | Technology |
+|----------|-----------|
+| Backend  | Node.js · Express · TypeScript · SQLite (node:sqlite) |
+| API Docs | Swagger UI (OpenAPI 3.0) |
+| Frontend | React 18 · TypeScript · Vite · CSS Modules |
+| Testing  | Jest + Supertest (backend) · Vitest + React Testing Library (frontend) |

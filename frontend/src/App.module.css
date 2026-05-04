@@ -1,0 +1,192 @@
+.app {
+  min-height: 100vh;
+  background: #f0f4f8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header */
+.header {
+  background: #1a3a5c;
+  color: #fff;
+  padding: 0 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background: #c0392b;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: -0.05em;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0.1rem 0 0;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.newTaskBtn {
+  padding: 0.65rem 1.4rem;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.newTaskBtn:hover {
+  background: #a93226;
+  transform: translateY(-1px);
+}
+
+.newTaskBtn:active {
+  transform: translateY(0);
+}
+
+/* Main */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Stats bar */
+.statsBar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1.5px solid #dde3ea;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  transition: all 0.2s;
+}
+
+.filterBtn:hover {
+  border-color: #1b5e97;
+  color: #1b5e97;
+}
+
+.filterBtnActive {
+  border-color: #1b5e97;
+  background: #e8f0f8;
+  color: #1b5e97;
+  font-weight: 700;
+}
+
+.filterLabel {
+  white-space: nowrap;
+}
+
+.filterCount {
+  background: #1b5e97;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  min-width: 1.4rem;
+  text-align: center;
+}
+
+.filterBtnActive .filterCount {
+  background: #1b5e97;
+}
+
+/* Form overlay */
+.formOverlay {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Loading */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e0e7f0;
+  border-top-color: #1b5e97;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #666;
+}
+
+.emptyIcon {
+  font-size: 3.5rem;
+  margin: 0 0 1rem;
+}
+
+.emptyText {
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem;
+}
