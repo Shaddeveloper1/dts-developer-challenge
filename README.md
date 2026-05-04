@@ -2,6 +2,8 @@
 
 A full-stack task management system for HMCTS caseworkers to track and manage their tasks efficiently.
 
+Created by Syed M Shad.
+
 ## Project Structure
 
 ```
